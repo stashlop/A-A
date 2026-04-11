@@ -505,7 +505,7 @@
                 {% if book.genre %}
                 <div class="genre-tags">
                     {% for genre in book.genre.split(',') %}
-                        <span class="genre-tag">{{ genre.strip() }}</span>
+                        <span class="genre-tag">{{ genre | trim }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}

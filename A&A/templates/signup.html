@@ -26,13 +26,12 @@
     <form class="auth-card" method="post" action="{{ url_for('signup') }}">
       <h2>Create account</h2>
 
-      {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-          <div class="flash">
-            {% for cat,msg in messages %}<div>{{ msg }}</div>{% endfor %}
-          </div>
-        {% endif %}
-      {% endwith %}
+      {% set messages = get_flashed_messages({"with_categories": true}) %}
+      {% if messages %}
+        <div class="flash">
+          {% for cat,msg in messages %}<div>{{ msg }}</div>{% endfor %}
+        </div>
+      {% endif %}
 
       <label>Username
         <input name="username" required autocomplete="username" />

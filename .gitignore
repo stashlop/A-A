@@ -1,0 +1,4 @@
+node_modules/
+instance/json_store/
+.env
+.DS_Store

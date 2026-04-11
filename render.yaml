@@ -1,11 +1,11 @@
 services:
   - type: web
     name: arcade-archives
-    env: python
+    env: node
     region: oregon # pick your nearest region
     plan: free
-    buildCommand: python -m pip install -r requirements.txt
-    startCommand: python "A&A/app.py"
+    buildCommand: npm install
+    startCommand: npm start
     envVars:
       - key: SECRET_KEY
         value: dev-secret-key-change-me
